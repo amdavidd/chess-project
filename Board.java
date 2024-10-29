@@ -7,14 +7,14 @@ public class Board{
 
     public void generateStartPosition(){
         //black row of pieces
-        board[0][0] = new Rook(false);
-        board[0][1] = new Knight(false);
-        board[0][2] = new Bishop(false);
-        board[0][3] = new Queen(false);
-        board[0][4] = new King(false);
-        board[0][5] = new Bishop(false);
-        board[0][6] = new Knight(false);
-        board[0][7] = new Rook(false);
+        board[0][0] = new Rook(false, a, 8);
+        board[0][1] = new Knight(false, a, 8);
+        board[0][2] = new Bishop(false, a, 8);
+        board[0][3] = new Queen(false, a, 8);
+        board[0][4] = new King(false, a, 8);
+        board[0][5] = new Bishop(false, a, 3);
+        board[0][6] = new Knight(false, a, 2);
+        board[0][7] = new Rook(false, a, 1);
 
 
         board[1][0] = new Pawn(false);

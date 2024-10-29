@@ -4,13 +4,14 @@ public class Piece {
     private int points;
     private boolean isWhite;
     private int pieceRank;
-    private int pieceFile;
+    private String pieceFile;
+    private boolean canMoveTo;
 
-    public Piece(String pieceName, boolean isWhite, int pieceRank, int pieceFile){
+    public Piece(String pieceName, boolean isWhite, String pieceFile, int pieceRank,){
         this.pieceName = pieceName;
         this.isWhite = isWhite;
-        this.pieceRank = pieceRank;
         this.pieceFile = pieceFile;
+        this.pieceRank = pieceRank;
         assignPieceIdAndPoints(pieceName);
     }
 
@@ -39,6 +40,10 @@ public class Piece {
             case "Pawn" -> {
                 setPieceId(5);
                 setPoints(1);
+            }
+            case "Empty" -> {
+                setPieceId(-1);
+                setPoints(0);
             }
         }
     }
@@ -80,7 +85,12 @@ public class Piece {
         return this.pieceRank;
     }
 
-    public int getPieceFile(){
+    public String getPieceFile(){
         return this.pieceFile;
+    }
+
+    //to be overriden
+    public boolean canMoveTo(){
+        return canMoveTo;
     }
 }
