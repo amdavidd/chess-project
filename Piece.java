@@ -3,10 +3,14 @@ public class Piece {
     private int pieceId;
     private int points;
     private boolean isWhite;
+    private int pieceRank;
+    private int pieceFile;
 
-    public Piece(String pieceName, boolean isWhite){
+    public Piece(String pieceName, boolean isWhite, int pieceRank, int pieceFile){
         this.pieceName = pieceName;
         this.isWhite = isWhite;
+        this.pieceRank = pieceRank;
+        this.pieceFile = pieceFile;
         assignPieceIdAndPoints(pieceName);
     }
 
@@ -52,6 +56,14 @@ public class Piece {
         assignPieceIdAndPoints(pieceName);
     }
 
+    public void setPieceRank(int pieceRank){
+        this.pieceRank = pieceRank;
+    }
+
+    public void setPieceFile(int pieceFile){
+        this.pieceFile = pieceFile;
+    }
+
     public int getPieceId(){
         return this.pieceId;
     }
@@ -62,5 +74,13 @@ public class Piece {
 
     public String getPieceName(){
         return this.pieceName;
+    }
+
+    public int getPieceRank(){
+        return this.pieceRank;
+    }
+
+    public int getPieceFile(){
+        return this.pieceFile;
     }
 }

@@ -1,6 +1,6 @@
 public class Empty extends Piece{
 
-    public Empty(){
-        super("empty", null);
+    public Empty(int pieceRank, int pieceFile){
+        super("empty", pieceRank, pieceFile);
     }
 }
